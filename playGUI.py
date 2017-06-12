@@ -10,7 +10,7 @@ main.title("Notre Dame Play Manager- Choose Play")
 #define playbutton class
 class playbutton:
     def __init__(self,master,message, rowint,col):
-        button = tkinter.Button(master, text = message, fg = "red", padx = 50, pady = 50 )
+        button = tkinter.Button(master, text = message, bg = "light green", padx = 50, pady = 50 )
         button.grid(row = rowint, column = col, padx = 10, pady = 10)
 
 play1 = playbutton(main,"Defense",0,0)
