@@ -1,0 +1,7 @@
+playGUI-- formation, odk, 
+PrePlayGUI - yardline, (dist,hash)
+resultGUI - result, gl, play type
+
+
+
+sends data to one object of completeplay which records it
