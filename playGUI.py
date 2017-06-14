@@ -7,6 +7,12 @@ playgui = tkinter.Tk()
 playgui.geometry("800x400")
 playgui.title("Notre Dame Play Manager- Choose Play")
 
+
+class play:
+    
+
+
+currentplay = 
 #define playbutton class
 class playtype:
     def __init__(self,master,message, odk, rowint,col):
