@@ -37,32 +37,59 @@ class playendbutton:
         button = tkinter.Button(master, text = message, bg = "light green", padx = 20, pady = 20, command = lambda: playresult.addPlayend(message) )
         button.grid(row = rowint, column = col, padx = 5, pady = 5)
 
+class numberkeys:
+    
+    def __init__(self, master, message, rowint, col):
+        print("placeholder")
 
 #playtype buttons
+label1 =  tkinter.Label(resultsgui, text = "Play Type", padx = 20, pady = 20 )
+label1.grid(row = 0, column = 0, padx = 5, pady = 5)
+play_type = ["Run","Pass", "Extra Pt", "Extra Pt Block", "KO", "KO Rec", "Punt", "PuntRec", "FG", "FG Block", "2pt", "2pt Block", "Onside Kick", "Onside Kick Rec" ]
+r = 1
+c = 0
+for p in play_type:
+    x = playtypebutton(resultsgui, p, r,c )
+    r +=1
+    if r > 7:
+        r = 1 
+        c +=1
+    
+#PLAYEND BUTTONS
+label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 20, pady = 20 )
+label2.grid(row = 0, column = 3, padx = 5, pady = 5)
+play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete"]
+r = 1
+c = 3
+for i in play_end:
+    j = playendbutton(resultsgui, i, r, c)  
+    r +=1
+    if r > 9:
+        r = 1
+        c+=1
 
-run = playtypebutton(resultsgui, "Run", 1,0 )
-Pass = playtypebutton(resultsgui, "Pass", 2,0)
-extrapt = playtypebutton(resultsgui, "Extra Pt", 3,0 )
-extraPtBlock = playtypebutton(resultsgui, "Extra Pt Block", 4,0)
-KO = playtypebutton(resultsgui, "KO", 5,0 )
-korec = playtypebutton(resultsgui,"KO Rec", 6,0)
-punt = playtypebutton(resultsgui, "Punt", 7,0)
-puntrec = playtypebutton(resultsgui, "Punt Rec", 1,1)
-FG = playtypebutton(resultsgui, "Fg", 2,1)
-FGblock = playtypebutton(resultsgui, "FG BLock", 3,1)
-twopt = playtypebutton(resultsgui, "2pt", 4,1)
-twoptblock = playtypebutton(resultsgui, "2pt Block", 5,1 )
-onsidekick = playtypebutton(resultsgui, "Onside Kick", 6,1)
-onsidekickreturn = playtypebutton(resultsgui, "Onside Kick Rec", 7,1 )
 
-# #playend buttons
-# Batted Down
-Block = playendbutton(resultsgui, "Block", 1,2)
-# Blocked, Def TD
-# Complete
-# Complete, Fumble
-# Complete, TD
-# Def TD
+
+
+#NUMKEY Buttons
+label3 = tkinter.Label(resultsgui, text = "Gain/Loss", padx = 20, pady = 20)
+label3.grid(row = 0, column = 3, padx = 5, pady = 5)
+numbers = ["1","2","3",
+           "4","5","6",
+           "7","8","9",
+           "0","-"
+    ]
+
+#ADD BUTTON FOR -
+
+#POSSIBLE FUNCTIONS FOR PLAYENDS
+# BattedDown = playendbutton(resultsgui, "Batted Down", 1,2)
+# Block = playendbutton(resultsgui, "Block", 1,2)
+# BlockedDefTD = playendbutton(resultsgui, "Blocked Def TD", 1,2)
+#Complete = playendbutton(resultsgui, "Complete", 1,3)
+# CompleteFumble = playendbutton(resultsgui, "Complete- Fumble", 1,2)
+#CompleteTD = playendbutton(resultsgui, "Complete- TD", 2,3)
+# DefTD = playendbutton(resultsgui, "Defense TD", 1,2)
 # Downed
 # Dropped
 # Fair Catch
@@ -73,7 +100,7 @@ Block = playendbutton(resultsgui, "Block", 1,2)
 # Interception
 # Interception, Def TD
 # Interception, Fumble
-# No Good
+#NoGood = playendbutton(resultsgui, "No Good", 3, 3)
 # No Good, Def TD
 # Offsetting Penalties
 # Out of Bounds
@@ -95,6 +122,5 @@ Block = playendbutton(resultsgui, "Block", 1,2)
 # Tipped
 # Touchback
 
-# play6 = playresult(resultsgui,"Doubles",  1,2)
 resultsgui.mainloop()
 print(playresult.playtype)
