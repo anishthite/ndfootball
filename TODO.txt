@@ -5,3 +5,17 @@ resultGUI - result, gl, play type- buttons in two columns and then numerical inp
 
 
 sends data to one object of completeplay which records it
+
+
+
+
+
+next up
+add quit functions
+expand buttons in playresult
+build playGUI
+build PrePlayGUI
+
+
+
+
