@@ -1,5 +1,5 @@
 playGUI-- formation, odk, 
-PrePlayGUI - yardline, (dist,hash) - numerical enter
+PrePlayGUI - yardline, dist, hash) - numerical enter
 resultGUI - result, gl, play type- buttons in two columns and then numerical input
 
 
@@ -11,7 +11,7 @@ sends data to one object of completeplay which records it
 
 
 next up
-add quit functions
+add quit functions- rn it needs check
 expand buttons in playresult
 build playGUI
 build PrePlayGUI

@@ -1,56 +1,62 @@
-#=====================footballGUI=========================
-#           Author: Anish Thite
+'''resultGUI
+Anish Thite 2017
+creates GUI window to ask user for intouts of after-play data
+'''
 import tkinter
-#from playlist import addplay
-#init playbook
 resultsgui = tkinter.Tk()
 resultsgui.geometry()
-resultsgui.title("Notre Dame Play Manager- Choose Play")
+resultsgui.title("Notre Dame Play Manager- Choose Result") #title of window
 
 
-#DEFINE RESULT CLASS - USED TO STORE DATA
+#DEFINE RESULT CLASS - USED TO STORE DATA FOR USE IN PLAYLIST.PY
 class result:
     def __init__(self):
+        #initializes self + variables
         self.playend = ""
         self.playtype = ""
         self.gainloss = 0
-    def addPlayend(self, message):
+    def addPlayend(self, message):#modifier
         self.playend = message
-    def addPlaytype(self,message):
+    def addPlaytype(self, message):#modifier
         self.playtype = message
-    def addGainloss(self,number):
+    def addGainloss(self, number):#modifier
         self.gainloss += number
+    def multiplyGainLoss(self, number):#modifier
+        self.gainloss *= number
 
-#create instance of the class
+#create instance of the class for use in other classes
 playresult = result()
 
 #define playbutton classes
 class playtypebutton:
-
     def __init__(self,master,message, rowint,col):
-        button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: playresult.addPlaytype(message) )
+        #initilizes button for entering data related to playtype
+        button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: playresult.addPlaytype(message))
         button.grid(row = rowint, column = col, padx = 5, pady = 5)
         button.config(width = 10)
 
 class playendbutton:
-    
     def __init__(self,master,message, rowint,col):
-        button = tkinter.Button(master, text = message, bg = "light green", padx = 20, pady = 20, command = lambda: playresult.addPlayend(message) )
+         #initilizes button for entering data related to playtype
+        button = tkinter.Button(master, text = message, bg = "red", padx = 20, pady = 20, command = lambda: playresult.addPlayend(message) )
         button.grid(row = rowint, column = col, padx = 5, pady = 5)
         button.config(width = 10)
 class numberkeys:
-    
     def __init__(self, master, message, rowint, col, multiplyer):
-        button = tkinter.Button(master, text = message, bg = "light green", padx = 20, pady = 20, command = lambda: playresult.addGainloss((multiplyer*int(message))))
+         #initilizes button for entering data related to gainloss 
+        button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: playresult.addGainloss((multiplyer*int(message))))
         button.grid(row = rowint, column = col, padx = 5, pady = 5)
         button.config(width = 5)
 
 #playtype buttons
+#label for button
 label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 20, pady = 20 )
 label1.grid(row = 0, column = 0, padx = 5, pady = 5)
+#button list
 play_type = ["Run","Pass", "Extra Pt", "Extra Pt Block", "KO", "KO Rec", "Punt", "PuntRec", "FG", "FG Block", "2pt", "2pt Block", "Onside Kick", "Onside Kick Rec" ]
 r = 1
 c = 0
+#create button
 for p in play_type:
     x = playtypebutton(resultsgui, p, r,c )
     r +=1
@@ -59,11 +65,13 @@ for p in play_type:
         c +=1
     
 #PLAYEND BUTTONS
+#label
 label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 20, pady = 20 )
-label2.grid(row = 0, column = 3, padx = 5, pady = 5)
+label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
 play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete"]
 r = 1
-c = 3
+c +=1
+#create button
 for i in play_end:
     j = playendbutton(resultsgui, i, r, c)  
     r +=1
@@ -76,10 +84,10 @@ for i in play_end:
 
 #NUMKEY Buttons
 label3 = tkinter.Label(resultsgui, text = "Gain/Loss", padx = 20, pady = 20)
-label3.grid(row = 0, column = 4, padx = 5, pady = 5)
+label3.grid(row = 0, column = c+1, padx = 5, pady = 5)
 numbers = ["0","1","2","3","4","5","6","7","8","9"]
 r = 1
-c = 4
+c +=1
 for x in numbers:
     y = numberkeys(resultsgui, x, r,c,10)
     r+=1
@@ -88,7 +96,10 @@ c = 5
 for a in numbers:
     b = numberkeys(resultsgui, a,r,c,1)
     r+=1
-#ADD BUTTON FOR -
+#NEGATIVE BUTTON
+negbutton = tkinter.Button(resultsgui, text = "neg", bg = "red", padx = 20, pady = 20, command = lambda: playresult.multiplyGainLoss(-1))
+negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
+negbutton.config(width = 5)
 
 #POSSIBLE FUNCTIONS FOR PLAYENDS
 # BattedDown = playendbutton(resultsgui, "Batted Down", 1,2)
@@ -131,4 +142,4 @@ for a in numbers:
 # Touchback
 
 resultsgui.mainloop()
-print(playresult.gainloss)
+

@@ -1,13 +1,15 @@
 #preplay GUI
-#           Author: Anish Thite
+# Anish Thite
 import tkinter
-from playlist import addplay
+
 #init playbook
 preplaygui = tkinter.Tk()
-preplaygui.geometry("800x400")
+preplaygui.geometry()
 preplaygui.title("Notre Dame Play Manager- Choose Play")
 
-#define playbutton class
+#DEFINE PREPLAY CLASS USED TO INOUT DATA INTO PLAYLIST.PY
+class preplay:
+    
 class preplaytype:
     def __init__(self,master,message, odk, rowint,col):
         button = tkinter.Button(master, text = message, bg = "light green", padx = 50, pady = 50, command = lambda: addplay(message) )
