@@ -80,7 +80,7 @@ for h in hashlist:
     v = hashbutton(preplaygui, h, r, c)
     r+=1
 #ydline buttons
-label4 = tkinter.Label(preplaygui, text = "hash", padx = 20, pady = 20 )
+label4 = tkinter.Label(preplaygui, text = "Beginning Ydline", padx = 20, pady = 20 )
 label4.grid(row = 0, column = c+1, padx = 5, pady = 5)
 r = 1
 c+=1

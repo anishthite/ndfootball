@@ -14,15 +14,15 @@ class result:
         #initializes self + variables
         self.playend = ""
         self.playtype = ""
-        self.gainloss = 0
+        self.endydline = 0
     def addPlayend(self, message):#modifier
         self.playend = message
     def addPlaytype(self, message):#modifier
         self.playtype = message
-    def addGainloss(self, number):#modifier
-        self.gainloss += number
+    def addEndYdline(self, number):#modifier
+        self.endydline += number
     def multiplyGainLoss(self, number):#modifier
-        self.gainloss *= number
+        self.endydline *= number
 
 #create instance of the class for use in other classes
 playresult = result()
@@ -43,8 +43,8 @@ class playendbutton:
         button.config(width = 10)
 class numberkeys:
     def __init__(self, master, message, rowint, col, multiplyer):
-         #initilizes button for entering data related to gainloss 
-        button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: playresult.addGainloss((multiplyer*int(message))))
+         #initilizes button for entering data related to endydline 
+        button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: playresult.addEndYdline((multiplyer*int(message))))
         button.grid(row = rowint, column = col, padx = 5, pady = 5)
         button.config(width = 5)
 
@@ -83,7 +83,7 @@ for i in play_end:
 
 
 #NUMKEY Buttons
-label3 = tkinter.Label(resultsgui, text = "Gain/Loss", padx = 20, pady = 20)
+label3 = tkinter.Label(resultsgui, text = "End Ydline", padx = 20, pady = 20)
 label3.grid(row = 0, column = c+1, padx = 5, pady = 5)
 numbers = ["0","1","2","3","4","5","6","7","8","9"]
 r = 1
