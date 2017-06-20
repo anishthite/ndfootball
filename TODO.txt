@@ -11,9 +11,8 @@ sends data to one object of completeplay which records it
 
 
 next up
-add quit functions- rn it needs check
+
 expand buttons in playresult
-build PrePlayGUI
-rewrite gainloss 
+ 
 
 
