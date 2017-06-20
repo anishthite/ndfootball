@@ -30,26 +30,26 @@ def main():
     preplay = preplay()
     class downbutton:
         def __init__(self, master, message, rowint, col):
-            button = tkinter.Button(master, text = message, bg = "light green", padx = 20, pady = 20, command = lambda: preplay.addDown(message))
+            button = tkinter.Button(master, text = message, bg = "light green", padx = 35, pady = 20, command = lambda: preplay.addDown(message))
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 5)
     class distancebutton:
         def __init__(self, master, message, rowint,col, multiplyer):
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: preplay.addDistance((multiplyer*int(message))))
+            button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: preplay.addDistance((multiplyer*int(message))))
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 5)
     class hashbutton:
         def __init__(self, master, message, rowint,col):
-            button = tkinter.Button(master, text = message, bg = "yellow", padx = 20, pady = 20, command = lambda: preplay.addhash(message))
+            button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: preplay.addhash(message))
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 5)
     class ydline:
         def __init__(self, master, message, rowint, col, multiplyer):
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: preplay.addydline((multiplyer*int(message))))
+            button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: preplay.addydline((multiplyer*int(message))))
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 5)
 #Down buttons
-    label1 = tkinter.Label(preplaygui, text = "Down", padx = 20, pady = 20 )
+    label1 = tkinter.Label(preplaygui, text = "Down", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     down = ["0","1","2","3","4"]
     r = 1
@@ -58,7 +58,7 @@ def main():
         x = downbutton(preplaygui, d, r,c )
         r +=1
 #distance buttons
-    label2 = tkinter.Label(preplaygui, text = "Distance", padx = 20, pady = 20 )
+    label2 = tkinter.Label(preplaygui, text = "Distance", padx = 35, pady = 20 )
     label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
     numbers = ["0","1","2","3","4","5","6","7","8","9"]
     r = 1
@@ -72,7 +72,7 @@ def main():
         b = distancebutton(preplaygui, a,r,c,1)
         r+=1
 #hash buttons
-    label3 = tkinter.Label(preplaygui, text = "hash", padx = 20, pady = 20 )
+    label3 = tkinter.Label(preplaygui, text = "hash", padx = 35, pady = 20 )
     label3.grid(row = 0, column = c+1, padx = 5, pady = 5)
     hashlist = ["call","far"]
     r = 1
@@ -81,7 +81,7 @@ def main():
         v = hashbutton(preplaygui, h, r, c)
         r+=1
 #ydline buttons
-    label4 = tkinter.Label(preplaygui, text = "Beginning Ydline", padx = 20, pady = 20 )
+    label4 = tkinter.Label(preplaygui, text = "Beginning Ydline", padx = 35, pady = 20 )
     label4.grid(row = 0, column = c+1, padx = 5, pady = 5)
     r = 1
     c+=1
@@ -96,7 +96,7 @@ def main():
         w = ydline(preplaygui, q,r,c,1)
         r+=1
 #neg button initilization
-    negbutton = tkinter.Button(preplaygui, text = "other's", bg = "red", padx = 20, pady = 20, command = lambda: preplay.multiplyydline(-1))
+    negbutton = tkinter.Button(preplaygui, text = "other's", bg = "red", padx = 35, pady = 20, command = lambda: preplay.multiplyydline(-1))
     negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
     negbutton.config(width = 5)
 

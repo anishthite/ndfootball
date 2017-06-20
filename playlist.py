@@ -19,9 +19,9 @@ class playlist:
         if beg > 0:
             #if end ydline > 0
             if int(end) > 0: #both +
-                return end-beg
+                return beg-end
             else: # beg +, end -
-                return ((50-abs(end)) + (50-beg))
+                return (-1 *(50-abs(end)) + (beg-50))
         else:
             #if end ydline > 0
             if int(end) > 0: # beg -, end +

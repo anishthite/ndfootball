@@ -34,7 +34,7 @@ def main():
             button.config(width = 10)
 
     #Formation buttons initialization
-    label1 = tkinter.Label(playgui, text = "Formation", padx = 20, pady = 20 )
+    label1 = tkinter.Label(playgui, text = "Formation", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     #button list
     formations = ["Defense", "Early", "Late", "Doubles", "Wide Open"]
@@ -49,7 +49,7 @@ def main():
             c +=1
 
     #ODK buttons initialization
-    label2 =  tkinter.Label(playgui, text = "ODK", padx = 20, pady = 20 )
+    label2 =  tkinter.Label(playgui, text = "ODK", padx = 35, pady = 20 )
     label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
     play_end = ["O", "D", "K"]
     r = 1

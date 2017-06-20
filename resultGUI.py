@@ -41,19 +41,19 @@ def main():
     class playendbutton:
         def __init__(self,master,message, rowint,col):
              #initilizes button for entering data related to playtype
-            button = tkinter.Button(master, text = message, bg = "red", padx = 20, pady = 20, command = lambda: playresult.addPlayend(message) )
+            button = tkinter.Button(master, text = message, bg = "red", padx = 35, pady = 20, command = lambda: playresult.addPlayend(message) )
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 10)
     class numberkeys:
         def __init__(self, master, message, rowint, col, multiplyer):
              #initilizes button for entering data related to endydline 
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 20, pady = 20, command = lambda: playresult.addEndYdline((multiplyer*int(message))))
+            button = tkinter.Button(master, text = message, bg = "light blue", padx =35, pady = 20, command = lambda: playresult.addEndYdline((multiplyer*int(message))))
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 5)
 
     #playtype buttons
     #label for button
-    label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 20, pady = 20 )
+    label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     #button list
     play_type = ["Run","Pass", "Extra Pt", "Extra Pt Block", "KO", "KO Rec", "Punt", "PuntRec", "FG", "FG Block", "2pt", "2pt Block", "Onside Kick", "Onside Kick Rec" ]
@@ -69,7 +69,7 @@ def main():
     
     #PLAYEND BUTTONS
     #label
-    label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 20, pady = 20 )
+    label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 35, pady = 20 )
     label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
     play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete"]
     r = 1
@@ -86,7 +86,7 @@ def main():
 
 
 #NUMKEY Buttons
-    label3 = tkinter.Label(resultsgui, text = "End Ydline", padx = 20, pady = 20)
+    label3 = tkinter.Label(resultsgui, text = "End Ydline", padx = 35, pady = 20)
     label3.grid(row = 0, column = c+1, padx = 5, pady = 5)
     numbers = ["0","1","2","3","4","5","6","7","8","9"]
     r = 1
@@ -100,7 +100,7 @@ def main():
         b = numberkeys(resultsgui, a,r,c,1)
         r+=1
 #NEGATIVE BUTTON
-    negbutton = tkinter.Button(resultsgui, text = "neg", bg = "red", padx = 20, pady = 20, command = lambda: playresult.multiplyGainLoss(-1))
+    negbutton = tkinter.Button(resultsgui, text = "neg", bg = "red", padx = 35, pady = 20, command = lambda: playresult.multiplyGainLoss(-1))
     negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
     negbutton.config(width = 5)
 
