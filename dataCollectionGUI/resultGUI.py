@@ -5,7 +5,7 @@ creates GUI window to ask user for intouts of after-play data
 import tkinter
 def main():
     resultsgui = tkinter.Tk()
-    resultsgui.geometry("900x1000")
+    resultsgui.geometry("1400x1000")
     resultsgui.title("Notre Dame Play Manager- Choose Result") #title of window
 
 
@@ -41,7 +41,7 @@ def main():
     class playendbutton:
         def __init__(self,master,message, rowint,col):
              #initilizes button for entering data related to playtype
-            button = tkinter.Button(master, text = message, bg = "red", padx = 35, pady = 20, command = lambda: playresult.addPlayend(message) )
+            button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: playresult.addPlayend(message) )
             button.grid(row = rowint, column = col, padx = 5, pady = 5)
             button.config(width = 10)
     class numberkeys:
@@ -71,14 +71,17 @@ def main():
     #label
     label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 35, pady = 20 )
     label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
-    play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete"]
+    play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete","CompleteFumble","CompleteTD","DefTD", "Downed","Dropped","Fair Catch","Fumble","Fumble, Def TD","Good",
+"Incomplete","Interception","Interception, Def TD","Interception, Fumble",
+"NoGood", "No Good, Def TD","Offsetting Penalties","Out of Bounds","Penalty","Penalty, Safety","Recovered","Return",
+"Rush","Rush, Safety","Rush, TD","Sack","Sack, Fumble","Sack, Fumble, Def TD","Sack, Safety","Safety","Scramble","Scramble, TD","Timeout","Tipped","Touchback"]
     r = 1
     c +=1
     #create button
     for i in play_end:
         j = playendbutton(resultsgui, i, r, c)  
         r +=1
-        if r > 9:
+        if r > 10:
             r = 1
             c+=1
 
@@ -95,7 +98,7 @@ def main():
         y = numberkeys(resultsgui, x, r,c,10)
         r+=1
     r = 1
-    c = 5
+    c += 1
     for a in numbers:
         b = numberkeys(resultsgui, a,r,c,1)
         r+=1
@@ -105,53 +108,17 @@ def main():
     negbutton.config(width = 5)
 
 #POSSIBLE FUNCTIONS FOR PLAYENDS
-# BattedDown = playendbutton(resultsgui, "Batted Down", 1,2)
-# Block = playendbutton(resultsgui, "Block", 1,2)
-# BlockedDefTD = playendbutton(resultsgui, "Blocked Def TD", 1,2)
-#Complete = playendbutton(resultsgui, "Complete", 1,3)
-# CompleteFumble = playendbutton(resultsgui, "Complete- Fumble", 1,2)
-#CompleteTD = playendbutton(resultsgui, "Complete- TD", 2,3)
-# DefTD = playendbutton(resultsgui, "Defense TD", 1,2)
-# Downed
-# Dropped
-# Fair Catch
-# Fumble
-# Fumble, Def TD
-# Good
-# Incomplete
-# Interception
-# Interception, Def TD
-# Interception, Fumble
-#NoGood = playendbutton(resultsgui, "No Good", 3, 3)
-# No Good, Def TD
-# Offsetting Penalties
-# Out of Bounds
-# Penalty
-# Penalty, Safety
-# Recovered
-# Return
-# Rush
-# Rush, Safety
-# Rush, TD
-# Sack
-# Sack, Fumble
-# Sack, Fumble, Def TD
-# Sack, Safety
-# Safety
-# Scramble
-# Scramble, TD
-# Timeout
-# Tipped
-# Touchback
 
-#close window button
-    closebutton = tkinter.Button(resultsgui, text = "End", bg = "blue", padx = 40, pady = 20, command = resultsgui.destroy)
-    closebutton.grid(row = 9, column = c +1, padx = 5, pady = 5)
-    closebutton.config(width = 4)
+
 #breakloop button
-    breakbutton = tkinter.Button(resultsgui, text = "End", bg = "pink", padx = 40, pady = 20, command = playresult.lastPlay)
-    breakbutton.grid(row = 10, column = c +1, padx = 5, pady = 5)
+    breakbutton = tkinter.Button(resultsgui, text = "End Game", bg = "pink", padx = 40, pady = 20, command = playresult.lastPlay)
+    breakbutton.grid(row = 9, column = c +1, padx = 5, pady = 5)
     breakbutton.config(width = 4)
+#close window button
+    closebutton = tkinter.Button(resultsgui, text = "End Play", bg = "blue", padx = 40, pady = 20, command = resultsgui.destroy)
+    closebutton.grid(row = 10, column = c +1, padx = 5, pady = 5)
+    closebutton.config(width = 4)
+
     resultsgui.mainloop()
     return playresult
 
