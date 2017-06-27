@@ -1,18 +1,14 @@
-playGUI-- formation, odk, 
-PrePlayGUI - yardline, dist, hash) - numerical enter
-resultGUI - result, gl, play type- buttons in two columns and then numerical input
+algorithims
+
+Simple: Gain/Loss
+Simple: Completed
+
+Medium: Downs converted
+
+AI: combine all of the above
 
 
+recurrent neural network -- opponent
 
-sends data to one object of completeplay which records it
-
-
-
-
-
-next up
-
-expand buttons in playresult
- 
 
 
