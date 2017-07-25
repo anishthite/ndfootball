@@ -10,5 +10,8 @@ AI: combine all of the above
 
 recurrent neural network -- opponent
 
+list plays most yardgain
+list plays most complete
+
 
 
