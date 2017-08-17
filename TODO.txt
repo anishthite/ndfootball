@@ -1,13 +1,20 @@
 algorithims
 
-Simple: Gain/Loss
+
 Simple: Completed
 
-Medium: Downs converted
+Medium: 
+Downs converted
+ball carrier
+how many times a team runs a certain formation
+how many times they run v. pass
+
+
+
+new defense interface
+interface to view data
 
 AI: combine all of the above
-
-
 recurrent neural network -- opponent
 
 list plays most yardgain
