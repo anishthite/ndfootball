@@ -1,0 +1,29 @@
+Goal: simpliy data colelction for football coaches, and allow for easy and loal data anlysis:
+
+Phase1: simplify data collection- data can be collected live
+Phase2: simple analysis - data can be analyzed by python scripts easily
+Phase3: AI will choose hwo to weight the different analysis and predict the ideal play to run by using a LSTM neural net (accouting for running the same play repeatedly)
+
+===============================
+Data Collectorv1:
+
+Preplay (yardline, distance, down)
+Play (formation and play type)
+Results (end result, end ydline, computes gain/loss)
+
+================================
+Analytics:
+
+Offense:
+simple gainloss
+avg gainloss
+simple completenss
+avg completenss
+
+Defense:
+
+Opp team formation/play
+Opp team ball carrier
+Opp team results (run/pass)
+
+===============================
