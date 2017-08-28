@@ -21,4 +21,8 @@ list plays most yardgain
 list plays most complete
 
 
+TESTING:
+splitlist
+
+
 

@@ -24,14 +24,20 @@ def main():
     #define playbuttons class
     class formationbutton:
         def __init__(self,master,message, rowint,col):
-            button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: currentplay.addFormation(message))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 10)
+            self.button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: self.onclick(message))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 10)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            currentplay.addFormation(message)
     class odkbutton:
         def __init__(self,master,message, rowint,col):
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 40, pady = 20, command = lambda: currentplay.addOdk(message))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 10)
+            self.button = tkinter.Button(master, text = message, bg = "light blue", padx = 40, pady = 20, command = lambda: self.onclick(message))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 10)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            currentplay.addOdk(message)
 
     #Formation buttons initialization
     label1 = tkinter.Label(playgui, text = "Formation", padx = 35, pady = 20 )

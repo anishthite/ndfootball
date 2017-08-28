@@ -42,6 +42,7 @@ class playlist:
                     self.playresult.playtype, 
                     self.playresult.playend, 
                     self.playresult.endydline,
-                    self.computeGainLoss()
+                    self.computeGainLoss(),
+                    self.playresult.ballcarrier
                     ])
         outputFile.close()

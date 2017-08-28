@@ -5,7 +5,7 @@ creates GUI window to ask user for intouts of after-play data
 import tkinter
 def main():
     resultsgui = tkinter.Tk()
-    resultsgui.geometry("1400x1000")
+    resultsgui.geometry("1500x1000")
     resultsgui.title("Notre Dame Play Manager- Choose Result") #title of window
 
 
@@ -17,6 +17,7 @@ def main():
             self.playtype = ""
             self.endydline = 0
             self.lastplay = False
+            self.ballcarrier = 0
         def addPlayend(self, message):#modifier
             self.playend = message
         def addPlaytype(self, message):#modifier
@@ -27,6 +28,8 @@ def main():
             self.endydline *= number
         def lastPlay(self):
             self.lastplay = True
+        def addBallCarrier(self, number):
+            self.ballcarrier += number
     #create instance of the class for use in other classes
     playresult = result()
 
@@ -34,23 +37,39 @@ def main():
     class playtypebutton:
         def __init__(self,master,message, rowint,col):
             #initilizes button for entering data related to playtype
-            button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: playresult.addPlaytype(message))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 10)
-
+            self.button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: self.onclick(message) )
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 8)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            playresult.addPlaytype(message)
     class playendbutton:
         def __init__(self,master,message, rowint,col):
              #initilizes button for entering data related to playtype
-            button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: playresult.addPlayend(message) )
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 10)
+            self.button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: self.onclick(message))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 8)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            playresult.addPlayend(message)
     class numberkeys:
         def __init__(self, master, message, rowint, col, multiplyer):
              #initilizes button for entering data related to endydline 
-            button = tkinter.Button(master, text = message, bg = "light blue", padx =35, pady = 20, command = lambda: playresult.addEndYdline((multiplyer*int(message))))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 5)
-
+            self.button = tkinter.Button(master, text = message, bg = "light blue", padx =35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 4)
+        def onclick(self, message, multiplyer):
+            self.button.config(bg = "grey")
+            playresult.addEndYdline((multiplyer*int(message)))
+    class ballcarrierkeys:
+        def __init__(self, master, message, rowint, col, multiplyer):
+             #initilizes button for entering data related to ball carrier
+            self.button = tkinter.Button(master, text = message, bg = "green", padx =35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 4)
+        def onclick(self, message, multiplyer):
+            self.button.config(bg = "grey")
+            playresult.addBallCarrier(multiplyer*int(message))
     #playtype buttons
     #label for button
     label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 35, pady = 20 )
@@ -63,10 +82,25 @@ def main():
     for p in play_type:
         x = playtypebutton(resultsgui, p, r,c )
         r +=1
-        if r > 7:
+        if r > 10:
             r = 1 
             c +=1
-    
+
+    #Player Numbers
+    label4 = tkinter.Label(resultsgui, text = "Ball Carrier", padx = 35, pady = 20)
+    label4.grid(row = 0, column = c + 1, padx = 5, pady = 5)
+    numbers = ["0","1","2","3","4","5","6","7","8","9"]
+    r = 1
+    c +=1
+    for ones in numbers:
+        d = ballcarrierkeys(resultsgui, ones, r,c,10)
+        r+=1
+    r = 1
+    c += 1
+    for tens in numbers:
+        f = ballcarrierkeys(resultsgui, tens,r,c,1)
+        r+=1
+
     #PLAYEND BUTTONS
     #label
     label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 35, pady = 20 )
@@ -103,17 +137,25 @@ def main():
         b = numberkeys(resultsgui, a,r,c,1)
         r+=1
 #NEGATIVE BUTTON
-    negbutton = tkinter.Button(resultsgui, text = "neg", bg = "red", padx = 35, pady = 20, command = lambda: playresult.multiplyGainLoss(-1))
-    negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
-    negbutton.config(width = 5)
-
-#POSSIBLE FUNCTIONS FOR PLAYENDS
-
-
+    class negbutton:
+        def __init__(self, c):
+            self.negbutton = tkinter.Button(resultsgui, text = "other's", bg = "red", padx = 35, pady = 20, command = lambda: self.onnegbuttonclick())
+            self.negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
+            self.negbutton.config(width = 5)        
+        def onnegbuttonclick(self):
+            self.negbutton.config(bg = "grey")
+            playresult.multiplyGainLoss(-1)
+    othersbutton = negbutton(c)
 #breakloop button
-    breakbutton = tkinter.Button(resultsgui, text = "End Game", bg = "pink", padx = 40, pady = 20, command = playresult.lastPlay)
-    breakbutton.grid(row = 9, column = c +1, padx = 5, pady = 5)
-    breakbutton.config(width = 4)
+    class breakButton:
+        def __init__(self, c):
+            self.breakbutton = tkinter.Button(resultsgui, text = "End Game", bg = "pink", padx = 40, pady = 20, command = lambda: self.onbuttonclick())
+            self.breakbutton.grid(row = 9, column = c +1, padx = 5, pady = 5)
+            self.breakbutton.config(width = 4)            
+        def onbuttonclick(self):
+            self.breakbutton.config(bg = "grey")
+            playresult.lastPlay()
+    stopbutton = breakButton(c)
 #close window button
     closebutton = tkinter.Button(resultsgui, text = "End Play", bg = "blue", padx = 40, pady = 20, command = resultsgui.destroy)
     closebutton.grid(row = 10, column = c +1, padx = 5, pady = 5)

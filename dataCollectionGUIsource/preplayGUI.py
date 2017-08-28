@@ -30,24 +30,36 @@ def main():
     preplay = preplay()
     class downbutton:
         def __init__(self, master, message, rowint, col):
-            button = tkinter.Button(master, text = message, bg = "light green", padx = 35, pady = 20, command = lambda: preplay.addDown(message))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 5)
+            self.button = tkinter.Button(master, text = message, bg = "light green", padx = 35, pady = 20, command = lambda: self.onclick(message))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 5)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            preplay.addDown(message)
     class distancebutton:
         def __init__(self, master, message, rowint,col, multiplyer):
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: preplay.addDistance((multiplyer*int(message))))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 5)
+            self.button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 5)
+        def onclick(self, message, multiplyer):
+            self.button.config(bg = "grey")
+            preplay.addDistance((multiplyer*int(message)))
     class hashbutton:
         def __init__(self, master, message, rowint,col):
-            button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: preplay.addhash(message))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 5)
+            self.button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: self.onclick(message))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 5)
+        def onclick(self, message):
+            self.button.config(bg = "grey")
+            preplay.addhash(message)
     class ydline:
         def __init__(self, master, message, rowint, col, multiplyer):
-            button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: preplay.addydline((multiplyer*int(message))))
-            button.grid(row = rowint, column = col, padx = 5, pady = 5)
-            button.config(width = 5)
+            self.button = tkinter.Button(master, text = message, bg = "light blue", padx = 35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
+            self.button.config(width = 5)
+        def onclick(self, message, multiplyer):
+            self.button.config(bg = "grey")
+            preplay.addydline((multiplyer*int(message)))
 #Down buttons
     label1 = tkinter.Label(preplaygui, text = "Down", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
@@ -96,10 +108,15 @@ def main():
         w = ydline(preplaygui, q,r,c,1)
         r+=1
 #neg button initilization
-    negbutton = tkinter.Button(preplaygui, text = "other's", bg = "red", padx = 35, pady = 20, command = lambda: preplay.multiplyydline(-1))
-    negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
-    negbutton.config(width = 5)
-
+    class otherside:
+        def __init__(self, c):
+            self.negbutton = tkinter.Button(preplaygui, text = "other's", bg = "red", padx = 35, pady = 20, command = lambda: self.onclick())
+            self.negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
+            self.negbutton.config(width = 5)
+        def onclick(self):
+            self.negbutton.config(bg = "grey")
+            preplay.multiplyydline(-1)
+    negbutton = otherside(c)
 #close Button
     closebutton = tkinter.Button(preplaygui, text = "Next", bg = "blue", padx = 40, pady = 20, command = preplaygui.destroy)
     closebutton.grid(row = 9, column = c +1, padx = 5, pady = 5)
