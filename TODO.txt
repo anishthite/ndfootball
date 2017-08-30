@@ -21,6 +21,12 @@ list plays most yardgain
 list plays most complete
 
 
+
+simplereport
+reportgui -- choosefile
+startupgui
+
+
 TESTING:
 splitlist
 

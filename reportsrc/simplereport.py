@@ -16,16 +16,22 @@ class playresult:
 				parsedplays.append(play)
 		return parsedplays
 	#Offensive Analysis
+	# def fliplist(self, oldlist):
+	# 		newlist = []
+	# 		index = oldlist.length - 1
+	# 		for  x in range :
+    				
 	def simplemostgain(self):
 			maxgain = -100
 			#copy list
 			plays = self.splitlist('O')
 			sorts.quickSort(plays, 9)
+
 			return plays
-	def avgmostgain(self):
+	def avgmostgain(self, ndrole):
 			namelist = []
 			avgmostgainlist = []
-			for play in self.splitlist('O'):
+			for play in self.splitlist(ndrole):
 				found = False
 				#check if the play has been listed
 				for avgplay in namelist:
@@ -75,6 +81,7 @@ class playresult:
 				parsedplays.append(play[5])
 		
 	# #off and def
+	#UP NEXT ==========================================================
 	# def mostPopularResult: 
 	#defmostPopular
 		#run v pass
@@ -91,5 +98,5 @@ class playresult:
 
 
 	
-myplay = playresult('../playlist.csv')
-print(myplay.mostPopularFormation('O'))
+# myplay = playresult('../playlist.csv')
+# print(myplay.mostPopularFormation('O'))
