@@ -1,8 +1,5 @@
-1,10,call,12,O,Early,KO,Interception,11,1,31
-1,10,call,-20,O,Defense,Run,BattedDown,30,50,10
-2,22,call,-22,O,Defense,KO,BlockedDefTD,23,55,32
-3,10,call,-21,O,Early,KO,BlockedDefTD,-10,-11,32
-4,12,far,-1,O,Early,Extra Pt Block,Block,-32,31,22
-1,11,far,11,D,Right,KO,Recovered,32,-21,34
-2,23,far,33,D,Right,PuntRec,Good,42,-9,43
-4,32,far,51,D,Right Plus,KO Rec,Good,23,28,23
+1,0,,-30,D,Right,Run,Good,35,35,0
+2,0,,-35,D,Right,Pass,Complete,-40,5,0
+3,0,,-40,D,Late Plus,Pass,Out of Bounds,-40,0,0
+0,0,,-40,D,Early PlusLate,Run,Good,-41,1,0
+0,0,,-41,D,Left,Pass,CompleteTD,1,49,0

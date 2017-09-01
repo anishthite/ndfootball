@@ -43,7 +43,7 @@ def main():
     label1 = tkinter.Label(playgui, text = "Formation", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     #button list
-    formations = ["Defense", "Early","Early Plus" "Late", "Late Plus", "Right", "Right Plus", "Left", "Left Plus", "Doubles Left","Doubles Left Plus",
+    formations = ["Defense", "Early","Early Plus", "Late", "Late Plus", "Right", "Right Plus", "Left", "Left Plus", "Doubles Left","Doubles Left Plus",
                     "Doubles Right","Doubles Right Plus", "Wide Open Left", "Wide Open Left Plus", "Wide Open Right", "Wide Open Right Plus","Wide Open Left Weak", 
                     "Wide Open Right Weak", "Wide Open Left Rambo Plus", "Wide Open Right Rambo Plus","Wide Open Left Rambo Minus", "Wide Open Right Rambo Minus","Wing Left",
                     "Wing Left PLus", "Wing Right", "Wing Right Plus", "Empty Left", "Empty Left Plus", "Empty Right", "Empty Right Plus"]

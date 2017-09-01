@@ -78,12 +78,43 @@ class playresult:
 		popularplayer = []
 		#put all O or D in teamside
 		for play in self.splitlist(ndrole):
-				parsedplays.append(play[5])
-		
+				parsedplays.append([play[5], play[10]])
+		for play in parsedplays:	
+			found = False
+			#if game is in popform list add one to obj type
+			for countedplay in popularplayer:
+				if play[0] == countedplay[0] and play[1] == countedplay[1]:
+					countedplay[2] +=1
+					found = True
+					break
+			if (found == False):
+				popularplayer.append([play[0], play[1], 1])
+		#return popform list 
+		sorts.quickSort(popularplayer, 2)
+		return popularplayer
 	# #off and def
 	#UP NEXT ==========================================================
-	# def mostPopularResult: 
-	#defmostPopular
+	def mostPopularResult(self, ndrole):
+		parsedplays = []
+		resultplay = []
+		#put all O or D in teamside
+		for play in self.splitlist(ndrole):
+			parsedplays.append([play[5], play[6]])	
+		#for each play in parsedplays
+		for play in parsedplays:	
+			found = False
+			#if game is in popform list add one to obj type
+			for countedplay in resultplay:
+				if play[0] == countedplay[0] and play[1] == countedplay[1]:
+					countedplay[2] +=1
+					found = True
+					break
+			if (found == False):
+				resultplay.append([play[0],play[1], 1])
+		#return popform list 
+		sorts.quickSort(resultplay, 2)
+		return resultplay
+	#defmostPopularOutcome
 		#run v pass
 
 
@@ -98,5 +129,7 @@ class playresult:
 
 
 	
-# myplay = playresult('../playlist.csv')
-# print(myplay.mostPopularFormation('O'))
+myplay = playresult('../playlist.csv')
+print(myplay.mostPopularFormation('O'))
+print(myplay.avgmostgain('D'))
+

@@ -8,7 +8,7 @@ def main():
     reportgui.title("Notre Dame Play Manager- Analytics ")
     output = tkinter.StringVar()
     name = tkinter.StringVar()
-    output.set(' v')
+    output.set('')
     name.set('')
     class computebutton:
         def __init__(self, master, message, rowint, colint, bck, output, name):
@@ -16,7 +16,7 @@ def main():
             self.button.grid(row = rowint, column = colint, padx = 10, pady = 5)
             self.button.config(width = 4)
         def onclick(self, message, output, name):
-            self.button.config(bg = "grey")
+            #self.button.config(bg = "grey")
             name.set(message)
             if message == "Simple Most Gain":
                 result = playresult('../playlist.csv')
@@ -26,8 +26,63 @@ def main():
                 for play in resultlist:
                     display += str(play)
                     display +="\n"
-                output.set(display)             
-          
+                output.set(display)
+            if message == "Averaged Most Gain":             
+                result = playresult('../playlist.csv')
+                resultlist = result.avgmostgain('O')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+            if message == "Most Popular Formation (us)":             
+                result = playresult('../playlist.csv')
+                resultlist = result.mostPopularFormation('O')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+            if message == "Averaged Most Gain (them)":             
+                result = playresult('../playlist.csv')
+                resultlist = result.avgmostgain('D')
+                display = ""
+                print(resultlist.reverse())
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+            if message == "Most Popular Formation (them)":             
+                result = playresult('../playlist.csv')
+                resultlist = result.mostPopularFormation('D')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+            if message == "Most Popular Player":             
+                result = playresult('../playlist.csv')
+                resultlist = result.mostPopularPlayer('D')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+            if message == "Most Popular Result (them)":             
+                result = playresult('../playlist.csv')
+                resultlist = result.mostPopularResult('D')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
+
+                     
     label1 = tkinter.Label(reportgui, text = "Compute File:", padx = 35, pady = 20 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     #list buttons
@@ -35,7 +90,7 @@ def main():
     filefield.grid(row = 0, column = 1  )
     #computebutton
     offbuttonlist = ["Simple Most Gain", "Averaged Most Gain", "Most Popular Formation (us)"]
-    defbuttonlist = ["Averaged Most gain (them)", "Most Popular Formation (them)", "Most Popular Player"]
+    defbuttonlist = ["Averaged Most Gain (them)", "Most Popular Formation (them)", "Most Popular Player", "Most Popular Result (them)"]
     r = 1
     index = 0
     for button in offbuttonlist:
