@@ -1,0 +1,30 @@
+1,0,,-1,D,PROS,Run,,-5,4,LF
+2,6,,-5,D,PROS,Run,,-10,5,RF
+3,1,,-10,D,PROS,Run,,-10,0,RF
+1,10,,-5,D,Doubles Left,Run,,-6,1,F
+2,9,,-6,D,Doubles Left,Pass,,-20,14,IR
+1,10,,-20,D,Doubles Left,Run,,-16,-4,Q
+2,14,,-16,D,Doubles Left,Run,,-16,0,IR
+3,14,,-16,D,Trey,Pass,,39,45,OR
+1,10,,39,D,Trey Right,Run,,34,5,IR
+2,5,,34,D,Trey Right,Run,,28,6,F
+1,10,,28,D,Doubles Left,Pass,,28,0,RR
+2,10,,28,D,Trips,Run,,26,2,F
+3,8,,26,D,Trips,Pass,,0,26,F
+1,10,,-36,D,Open Left,Pass,,-36,0,OR
+2,10,,-36,D,Wide Open,Run,,-37,1,RF
+3,9,,-37,D,Wide Open Right,Pass,,-37,0,OR
+1,10,,-34,D,Spread,Run,,47,19,F
+1,10,,47,D,Spread,Run,,48,-1,F
+2,11,,48,D,Doubles Right,Pass,,33,15,OR
+1,10,,33,D,Trips,Run,,30,3,F
+2,7,,30,,D,Spread,Run,,-40,-30,Q
+2,37,,-40,D,Doubles Left,Run,,-40,0,RR
+3,37,,-40,D,Wide Trips,Run,,-45,5,F
+,,,37,D,Wide Trips,Run,,20,17,F
+,,,20,D,Wide Trips,Pass,,28,-8,Q
+,,,28,D,Wide Trips,Pass,,0,28,LR
+,,,-28,D,Spread,Pass,,-28,0,LOR
+,,,-28,D,Spread,Pass,,-28,0,LIR
+,,,-28,D,Spread,Run,,-28,0,Q
+0,0,,0,,,,,0,0,0

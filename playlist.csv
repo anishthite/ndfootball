@@ -1,5 +1,116 @@
-1,0,,-30,D,Right,Run,Good,35,35,0
-2,0,,-35,D,Right,Pass,Complete,-40,5,0
-3,0,,-40,D,Late Plus,Pass,Out of Bounds,-40,0,0
-0,0,,-40,D,Early PlusLate,Run,Good,-41,1,0
-0,0,,-41,D,Left,Pass,CompleteTD,1,49,0
+0,0,,0,,,,,0,0,0
+0,0,,0,,,,,0,0,0
+0,0,,-23,O,Spread,Run,,-39,16,0
+0,0,,-39,O,Doubles Left,Run,,-40,1,0
+0,0,,-40,O,Trip,Pass,,-48,8,0
+0,0,,-48,O,Wide Open Left,Run,,41,11,0
+0,0,,41,O,Trip,Run,,41,0,0
+0,0,,41,O,Spread,Run,,36,5,0
+0,0,,36,O,Doubles Left,Run,,33,3,0
+0,0,,33,O,Doubles Left,Run,,27,6,0
+0,0,,27,O,Spread,Run,,36,-9,0
+0,0,,36,O,Trip,Pass,,29,7,0
+0,0,,29,O,Wide Open Left,Run,,29,0,0
+0,0,,29,O,Trip,Run,,14,15,0
+0,0,,14,O,Doubles Left,Run,,6,8,0
+0,0,,6,O,Wide Open Left,Run,,3,3,0
+0,0,,3,O,Wide Open,Run,,0,-97,0
+0,0,,-39,D,Right,Run,,-44,5,6
+0,0,,-44,D,Spread,Run,,47,9,6
+0,0,,47,D,Trip,Run,,44,3,3
+0,0,,44,D,Trip,Run,,40,4,6
+0,0,,40,D,PRO,Run,,36,4,6
+0,0,,36,D,Trey,Pass,,36,0,4
+0,0,,36,D,Trip,Run,,27,9,6
+0,0,,27,D,Doubles Left,Run,,32,-5,0
+0,0,,32,D,Spread,Pass,,0,0,82
+0,0,,32,D,Spread,Run,,36,-4,0
+0,0,,-36,O,Doubles Left,Run,,-40,4,0
+0,0,,-40,O,Doubles Right,Run,,-40,0,0
+0,0,,-40,O,Spread,Run,,-34,-6,0
+0,0,,-14,D,Trip,Run,,-18,4,6
+0,0,,-18,D,Trip,,,-18,0,0
+0,0,,-13,D,Late,Run,,-13,0,0
+0,0,,22,O,Doubles Right,Run,,17,5,0
+0,0,,17,O,Doubles Right,Run,,15,2,0
+0,0,,15,O,Doubles Right,Pass,,0,-85,0
+0,0,,20,O,Trip,Pass,,20,0,0
+0,0,,-20,D,Trip,Pass,,7,73,4
+0,0,,7,D,Trey,Run,,0,-93,6
+0,0,,-20,O,Trip,Run,,-25,5,0
+0,0,,-25,O,Empty Left,Run,,-27,2,0
+0,0,,-27,O,Trip,Pass,,-40,13,0
+0,0,,-40,O,Doubles Left,Pass,,-40,0,0
+0,0,,-40,O,Spread,Run,,-39,-1,0
+0,0,,-39,O,Right,Pass,,-10,-29,0
+0,0,,10,D,Doubles Left,Run,,7,3,3
+0,0,,7,D,Wide Open,Run,,5,2,6
+0,0,,5,D,Spread,Run,,0,-95,6
+0,0,,-18,O,Trip,Pass,,-24,6,0
+0,0,,-24,O,Trip,Run,,-27,3,0
+0,0,,-27,O,Early,Run,,-26,-1,0
+0,0,,-48,D,Late,Run,,-49,1,6
+0,0,,-49,D,Trip,Run,,44,7,3
+0,0,,44,D,Trip,Pass,,44,0,0
+0,0,,49,D,Trip,Run,,47,2,6
+0,0,,47,K,,,,-21,-32,0
+0,0,,-21,O,Trip,Pass,,-21,0,0
+0,0,,-34,D,Doubles Left,Run,,50,16,6
+0,0,,50,D,Trip,Run,,46,4,6
+0,0,,46,D,Trip,Run,,44,2,6
+0,0,,44,D,Wide Open Left,Run,,39,5,0
+0,0,,39,D,Wide Open Left,,,44,-5,0
+0,0,,49,,Wide Open Left,Pass,,30,19,6
+0,0,,30,D,Empty Right,Run,,32,-2,6
+0,0,,31,D,Left,,,32,-1,0
+0,0,,32,,,,,32,0,0
+0,0,,27,D,Right,Pass,,0,-73,4
+0,0,,-30,O,Spread,Run,,-47,17,0
+0,0,,-47,O,Trip,Pass,,-46,-1,0
+0,0,,-46,O,Trip,Run,,-47,1,0
+0,0,,-47,O,Right,Pass,,-47,0,0
+0,0,,-21,D,Wide Open Right,Run,,-31,10,6
+0,0,,-31,D,Trip,Run,,-35,4,6
+0,0,,-35,D,Trip,Run,,-36,1,3
+0,0,,-36,,Trip,Run,,-36,0,6
+0,0,,-36,K,,,,32,32,0
+0,0,,-32,O,Right,Run,,-32,0,0
+0,0,,-32,O,Left,Pass,,-32,0,0
+0,0,,-32,O,Trip,Pass,,43,25,0
+0,0,,43,,Trey,Pass,,26,17,0
+0,0,,26,D,Trey,Pass,,26,0,0
+0,0,,26,O,Late,Pass,,10,16,0
+0,0,,10,O,Right,Run,,13,-3,0
+0,0,,13,O,Early,Pass,,7,6,0
+0,0,,7,O,Early,Pass,,0,-93,0
+0,0,,-40,K,,,,0,-40,0
+0,0,,-31,D,Early,,,-44,13,6
+0,0,,-44,D,Trip,Run,,43,13,6
+0,0,,43,D,Late,Run,,43,0,6
+0,0,,38,D,Trip,Run,,35,3,6
+0,0,,35,D,Late,Run,,26,9,6
+0,0,,26,D,Wide Open Left,Run,,22,4,6
+0,0,,22,D,Wide Open Right,Run,,13,9,6
+0,0,,13,D,Wide Open Right,Run,,16,-3,3
+0,0,,16,D,Wide Open Right,Run,,16,0,6
+0,0,,16,D,Doubles Left,,,16,0,0
+0,0,,16,K,,,,0,-84,0
+0,0,,21,D,Trip,Run,,13,8,3
+0,0,,13,K,,,,0,-87,0
+0,0,,-30,O,Trip,Pass,,-34,4,0
+0,0,,-34,K,Defense,,,0,-34,0
+0,0,,-41,O,Trip,Run,,-47,6,0
+0,0,,-47,O,Doubles Left,Run,,1,52,0
+0,0,,1,O,Late,Run,,1,0,0
+0,0,,1,K,Doubles Left,,,0,-99,0
+0,0,,-29,O,Trip,Pass,,33,38,0
+0,0,,33,O,Trip,Pass,,34,-1,0
+0,0,,34,O,Trip,Pass,,22,12,0
+0,0,,22,,Trip,Run,,14,8,0
+0,0,,14,O,Trip,Pass,,4,10,0
+0,0,,4,O,Trip,Pass,,4,0,0
+0,0,,4,O,Spread,Pass,,4,0,0
+0,0,,4,O,Trip,Run,,40,-36,0
+0,0,,9,O,Spread,Pass,,7,2,0
+0,0,,7,O,Trip,Run,,0,-93,0
+0,0,,17,O,Left,Pass,,17,0,0

@@ -40,29 +40,14 @@ def main():
             currentplay.addOdk(message)
 
     #Formation buttons initialization
-    label1 = tkinter.Label(playgui, text = "Formation", padx = 35, pady = 20 )
-    label1.grid(row = 0, column = 0, padx = 5, pady = 5)
-    #button list
-    formations = ["Defense", "Early","Early Plus", "Late", "Late Plus", "Right", "Right Plus", "Left", "Left Plus", "Doubles Left","Doubles Left Plus",
-                    "Doubles Right","Doubles Right Plus", "Wide Open Left", "Wide Open Left Plus", "Wide Open Right", "Wide Open Right Plus","Wide Open Left Weak", 
-                    "Wide Open Right Weak", "Wide Open Left Rambo Plus", "Wide Open Right Rambo Plus","Wide Open Left Rambo Minus", "Wide Open Right Rambo Minus","Wing Left",
-                    "Wing Left PLus", "Wing Right", "Wing Right Plus", "Empty Left", "Empty Left Plus", "Empty Right", "Empty Right Plus"]
-    r = 1
-    c = 0
-    #create button
-    for f in formations:
-        x = formationbutton(playgui, f, r,c )
-        r +=1
-        if r > 7:
-            r = 1 
-            c +=1
+    
 
     #ODK buttons initialization
     label2 =  tkinter.Label(playgui, text = "ODK", padx = 35, pady = 20 )
-    label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
+    label2.grid(row = 0, column = 0, padx = 5, pady = 5)
     play_end = ["O", "D", "K"]
     r = 1
-    c += 1
+    c =0
     #create button
     for i in play_end:
         j = odkbutton(playgui, i, r, c)  
@@ -70,6 +55,22 @@ def main():
         if r > 9:
             r = 1
             c+=1
+    label1 = tkinter.Label(playgui, text = "Formation", padx = 35, pady = 20 )
+    label1.grid(row = 0, column = c+1, padx = 5, pady = 5)
+    #button list
+    formations = ["Defense", "Early","Early Plus", "Late", "Late Plus", "Right", "Right Plus", "Left", "Left Plus", "Doubles Left","Doubles Left Plus",
+                    "Doubles Right","Doubles Right Plus", "Wide Open Left", "Wide Open Left Plus", "Wide Open Right", "Wide Open Right Plus","Wide Open Left Weak", 
+                    "Wide Open Right Weak", "Wide Open Left Rambo Plus", "Wide Open Right Rambo Plus","Wide Open Left Rambo Minus", "Wide Open Right Rambo Minus","Wing Left",
+                    "Wing Left PLus", "Wing Right", "Wing Right Plus", "Empty Left", "Empty Left Plus", "Empty Right", "Empty Right Plus", "PROS","Wide Open","Trey","Trip", "Spread"]
+    r = 1
+    c += 1
+    #create button
+    for f in formations:
+        x = formationbutton(playgui, f, r,c )
+        r +=1
+        if r > 7:
+            r = 1 
+            c +=1
     #close Button
     closebutton = tkinter.Button(playgui, text = "Next", bg = "blue", padx = 40, pady = 20, command = playgui.destroy)
     closebutton.grid(row = 9, column = c +1, padx = 5, pady = 5)

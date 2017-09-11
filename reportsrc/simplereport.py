@@ -129,7 +129,4 @@ class playresult:
 
 
 	
-myplay = playresult('../playlist.csv')
-print(myplay.mostPopularFormation('O'))
-print(myplay.avgmostgain('D'))
 
