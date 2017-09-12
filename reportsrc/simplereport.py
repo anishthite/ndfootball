@@ -114,6 +114,11 @@ class playresult:
 		#return popform list 
 		sorts.quickSort(resultplay, 2)
 		return resultplay
+	def gradeformations(self):
+    	parsedplays = []
+		for play in self.splitlist('O'):
+    			parsedplays.append(play)
+		
 	#defmostPopularOutcome
 		#run v pass
 

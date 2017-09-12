@@ -3,9 +3,10 @@ Anish Thite 2017
 creates GUI window to ask user for intouts of after-play data
 '''
 import tkinter
+from resolution import resolution
 def main():
     resultsgui = tkinter.Tk()
-    resultsgui.geometry("1500x1000")
+    resultsgui.geometry(resolution())
     resultsgui.title("Notre Dame Play Manager- Choose Result") #title of window
 
 

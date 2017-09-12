@@ -2,11 +2,11 @@
 # creates GUI application to input data about play
 # Anish Thite
 import tkinter
-
+from resolution import resolution
 def main():
 
     playgui = tkinter.Tk()
-    playgui.geometry("1400x1000")
+    playgui.geometry(resolution())
     playgui.title("Notre Dame Play Manager- Choose Play")
 
     #CLASS USED TO STORE DATA FOR INPUT

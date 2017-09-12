@@ -1,11 +1,11 @@
 #preplay GUI
 # Anish Thite
 import tkinter
-
+from resolution import resolution
 def main():
 #init playbook
     preplaygui = tkinter.Tk()
-    preplaygui.geometry("1400x1000")
+    preplaygui.geometry(resolution())
     preplaygui.title("Notre Dame Play Manager- Choose PrePlay")
 
 #DEFINE PREPLAY CLASS USED TO INOUT DATA INTO PLAYLIST.PY

@@ -2,9 +2,10 @@
 #2017
 import tkinter
 from simplereport import playresult
+from resolution import resolution
 def main():
     reportgui = tkinter.Tk()    
-    reportgui.geometry("1400x1000")
+    reportgui.geometry(resolution())
     reportgui.title("Notre Dame Play Manager- Analytics ")
     output = tkinter.StringVar()
     name = tkinter.StringVar()
@@ -82,6 +83,15 @@ def main():
                     display += str(play)
                     display +="\n"
                 output.set(display)
+            if message == "Most Popular Result (us)":             
+                result = playresult('../playlist.csv')
+                resultlist = result.mostPopularResult('O')
+                display = ""
+                resultlist.reverse()
+                for play in resultlist:
+                    display += str(play)
+                    display +="\n"
+                output.set(display)
     leftframe = tkinter.Frame(reportgui)
     leftframe.pack(side = "left")
     rightframe = tkinter.Frame(reportgui)
@@ -94,7 +104,7 @@ def main():
     # #filefield.grid(row = 0, column = 1  )
     # filefield.pack()
     #computebutton
-    offbuttonlist = ["Simple Most Gain", "Averaged Most Gain", "Most Popular Formation (us)", "Completeness", "Formation Runner"]
+    offbuttonlist = ["Simple Most Gain", "Averaged Most Gain", "Most Popular Formation (us)", "Completeness", "Formation Runner", "Most Popular Result (us)"]
     defbuttonlist = ["Averaged Most Gain (them)", "Most Popular Formation (them)", "Most Popular Player", "Most Popular Result (them)"]
     r = 1
     index = 0
