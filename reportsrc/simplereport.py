@@ -20,7 +20,7 @@ class playresult:
 	# 		newlist = []
 	# 		index = oldlist.length - 1
 	# 		for  x in range :
-    				
+					
 	def simplemostgain(self):
 			maxgain = -100
 			#copy list
@@ -114,11 +114,32 @@ class playresult:
 		#return popform list 
 		sorts.quickSort(resultplay, 2)
 		return resultplay
+	def searchindexplaylist(self,name,list):
+		index = 1
+		for play in list:
+			if play[0] == name:
+				return index
+				break 
+			else:
+				index +=1
+			
 	def gradeformations(self):
-    	parsedplays = []
-		for play in self.splitlist('O'):
-    			parsedplays.append(play)
-		
+		parsedplays = []
+		gradedformations = []
+		# for play in self.splitlist('O'):
+		# 		parsedplays.append(play)
+		# for play in parsedplays:
+		for play in self.avgmostgain('O'):
+			avgindex = self.searchindexplaylist(play[0], self.avgmostgain('O'))
+			runindex = self.searchindexplaylist(play[0],self.mostPopularFormation('O'))
+			if runindex/avgindex >1:
+				gradedformations.append([play[0], "RUN LESS", runindex/avgindex ])
+			elif runindex/avgindex < 1:
+				gradedformations.append([play[0], "RUN MORE", runindex/avgindex])
+			else:
+				gradedformations.append([play[0], "NO CHANGE", runindex/avgindex])
+		sorts.quickSort(gradedformations,2)
+		return gradedformations
 	#defmostPopularOutcome
 		#run v pass
 
