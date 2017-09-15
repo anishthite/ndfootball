@@ -139,7 +139,7 @@ class playresult:
 			else:
 				gradedformations.append([play[0], "NO CHANGE", runindex/avgindex])
 		sorts.quickSort(gradedformations,2)
-		return gradedformations
+		return gradedformations	
 	#defmostPopularOutcome
 		#run v pass
 
