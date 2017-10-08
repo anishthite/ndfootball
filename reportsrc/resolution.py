@@ -1,2 +1,2 @@
 def resolution():
-    return "1400x1000"
+    return "1000x1300"

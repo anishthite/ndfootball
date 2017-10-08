@@ -1,0 +1,86 @@
+0,0,,-35,O,Trip,Pass,,-34,-1,0
+0,0,,-34,O,Trip,Run,,-36,2,0
+0,0,,-36,),Trip,Pass,,-42,2,0
+0,0,,-42,O,Doubles Right,Run,,-48,6,0
+0,0,,-20,D,Wing Red,,,26,54,0
+0,0,,26,O,Doubles Left,Run,,19,7,0
+0,0,,19,O,Doubles Right,Run,,13,6,0
+0,0,,13,O,Doubles Right,Run,,8,5,0
+0,0,,8,O,Doubles Right,Run,,6,2,0
+0,0,,6,O,Right,Run,,5,1,0
+0,0,,5,O,Trip,Pass,,5,0,0
+0,0,,4,K,,,,0,-96,0
+0,0,,-5,D,Wing Red,Run,,-8,3,22
+0,0,,-8,D,Wing Twins,Run,,-30,22,22
+0,0,,-25,D,Wing Twins,Pass,,12,63,11
+0,0,,12,D,Wide Wing,Run,,9,3,8
+0,0,,9,D,Wing Red,Run,,0,-91,8
+0,0,,-40,O,Right,Run,,50,10,0
+0,0,,50,O,Trip,Run,,-49,-1,0
+0,0,,-49,O,Trip,Pass,,46,5,0
+0,0,,46,O,Trip,Pass,,46,0,0
+0,0,,46,K,,,,0,-54,0
+0,0,,-10,D,Spread,Run,,-10,0,8
+0,0,,-10,D,Spread,,,-5,-5,0
+0,0,,-4,D,Wing Red,Run,,-5,1,8
+0,0,,-5,D,Wing Red,Pass,,-5,0,0
+0,0,,-20,D,Wing Red,,,-7,-13,0
+0,0,,-17,D,Wing Red,Run,,-11,-6,8
+0,0,,-11,D,Wing Twins,Run,,-16,5,22
+0,0,,16,K,,,,0,-84,0
+0,0,,43,O,Trip,Run,,47,-4,0
+0,0,,47,O,Trip,Run,,-41,-12,0
+0,0,,-41,O,Trip,Pass,,-43,2,0
+0,0,,-43,K,,,,0,-43,0
+0,0,,-15,D,Wing Red,Run,,-8,-7,8
+0,0,,-9,D,Wing Red,Run,,-16,7,0
+0,0,,-16,D,Wing Red,Run,,-18,2,2
+0,0,,-18,K,Wide Wing,,,0,-18,0
+0,0,,47,O,Trey,Run,,19,28,0
+0,0,,19,K,,,,0,-81,0
+0,0,,19,O,Late,Run,,20,-1,0
+0,0,,20,O,Early,Run,,17,3,0
+0,0,,17,O,Late,Pass,,17,0,0
+0,0,,22,O,Trey,Pass,,8,14,0
+0,0,,8,O,Late,Run,,10,-2,0
+0,0,,10,O,Late,Pass,,0,-90,0
+0,0,,40,K,,,,0,-60,0
+0,0,,-14,D,Wing Red,Pass,,29,57,22
+0,0,,29,D,Wing Red,Run,,25,4,0
+0,0,,25,D,Wide Wing,,,20,5,0
+0,0,,20,D,Wing Red,Run,,18,2,0
+0,0,,18,D,Wing Red,Run,,10,8,8
+0,0,,10,D,Wing Red,Run,,4,6,22
+0,0,,4,D,Wide Wing,Run,,4,0,0
+0,0,,-41,O,Trip,Run,,49,10,0
+0,0,,49,O,Trey,Pass,,34,15,0
+0,0,,20,K,,,,0,-80,0
+0,0,,34,O,Trip,Pass,,34,0,0
+0,0,,34,O,Trip,Pass,,34,0,0
+0,0,,46,D,Wing Red,Run,,-49,-5,0
+0,0,,46,D,Wide Wing,Pass,,46,0,0
+0,0,,46,D,Wing Twins,Run,,-49,-5,8
+0,0,,49,D,Wing Twins,,,46,3,0
+0,0,,-9,O,Right,Run,,-9,0,0
+0,0,,-9,O,Right,Run,,-14,5,0
+0,0,,-14,O,Right,Run,,-16,2,0
+0,0,,45,K,,,,0,-55,0
+0,0,,35,D,Wide Wing,Run,,46,-11,8
+0,0,,44,D,Wide Wing,Run,,34,10,0
+0,0,,34,D,Wing Over,Pass,,25,9,0
+0,0,,25,D,Wing Red,Run,,21,4,22
+0,0,,23,D,Wing Red,Run,,11,12,8
+0,0,,11,D,Wing Over,Pass,,3,8,8
+0,0,,3,D,Wing Red,Run,,2,1,8
+0,0,,2,D,Wide Wing,Run,,5,-3,8
+0,0,,-20,O,Left,Run,,-25,5,0
+0,0,,-9,O,Right,Run,,0,-9,0
+0,0,,44,D,Wide Open Right,Run,,0,-56,0
+0,0,,13,D,Late,Run,,7,6,8
+0,0,,7,D,Wing Red,Pass,,0,-93,22
+0,0,,43,O,Right,Pass,,45,-2,0
+0,0,,45,O,Right,Run,,41,4,0
+0,0,,41,O,Trip,Pass,,41,0,0
+0,0,,41,O,Right,Pass,,41,0,0
+0,0,,41,K,,,,0,-59,0
+0,0,,-10,D,Wide Wing,Run,,-10,0,22

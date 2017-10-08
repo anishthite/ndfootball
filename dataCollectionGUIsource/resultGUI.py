@@ -38,7 +38,7 @@ def main():
     class playtypebutton:
         def __init__(self,master,message, rowint,col):
             #initilizes button for entering data related to playtype
-            self.button = tkinter.Button(master, text = message, bg = "light green", padx = 40, pady = 20, command = lambda: self.onclick(message) )
+            self.button = tkinter.Button(master, text = message, bg = "light green", padx = 20, pady = 10, command = lambda: self.onclick(message) )
             self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
             self.button.config(width = 8)
         def onclick(self, message):
@@ -47,7 +47,7 @@ def main():
     class playendbutton:
         def __init__(self,master,message, rowint,col):
              #initilizes button for entering data related to playtype
-            self.button = tkinter.Button(master, text = message, bg = "yellow", padx = 35, pady = 20, command = lambda: self.onclick(message))
+            self.button = tkinter.Button(master, text = message, bg = "yellow", padx = 20, pady = 10, command = lambda: self.onclick(message))
             self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
             self.button.config(width = 8)
         def onclick(self, message):
@@ -56,7 +56,7 @@ def main():
     class numberkeys:
         def __init__(self, master, message, rowint, col, multiplyer):
              #initilizes button for entering data related to endydline 
-            self.button = tkinter.Button(master, text = message, bg = "light blue", padx =35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button = tkinter.Button(master, text = message, bg = "light blue", padx =20, pady = 10, command = lambda: self.onclick(message, multiplyer))
             self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
             self.button.config(width = 4)
         def onclick(self, message, multiplyer):
@@ -65,7 +65,7 @@ def main():
     class ballcarrierkeys:
         def __init__(self, master, message, rowint, col, multiplyer):
              #initilizes button for entering data related to ball carrier
-            self.button = tkinter.Button(master, text = message, bg = "green", padx =35, pady = 20, command = lambda: self.onclick(message, multiplyer))
+            self.button = tkinter.Button(master, text = message, bg = "green", padx =20, pady = 10, command = lambda: self.onclick(message, multiplyer))
             self.button.grid(row = rowint, column = col, padx = 5, pady = 5)
             self.button.config(width = 4)
         def onclick(self, message, multiplyer):
@@ -73,7 +73,7 @@ def main():
             playresult.addBallCarrier(multiplyer*int(message))
     #playtype buttons
     #label for button
-    label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 35, pady = 20 )
+    label1 = tkinter.Label(resultsgui, text = "Play Type", padx = 20, pady = 10 )
     label1.grid(row = 0, column = 0, padx = 5, pady = 5)
     #button list
     play_type = ["Run","Pass", "Extra Pt", "Extra Pt Block", "KO", "KO Rec", "Punt", "PuntRec", "FG", "FG Block", "2pt", "2pt Block", "Onside Kick", "Onside Kick Rec" ]
@@ -88,7 +88,7 @@ def main():
             c +=1
 
     #Player Numbers
-    label4 = tkinter.Label(resultsgui, text = "Ball Carrier", padx = 35, pady = 20)
+    label4 = tkinter.Label(resultsgui, text = "Ball Carrier", padx = 20, pady = 10)
     label4.grid(row = 0, column = c + 1, padx = 5, pady = 5)
     numbers = ["0","1","2","3","4","5","6","7","8","9"]
     r = 1
@@ -104,7 +104,7 @@ def main():
 
     #PLAYEND BUTTONS
     #label
-    label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 35, pady = 20 )
+    label2 =  tkinter.Label(resultsgui, text = "Play Result", padx = 20, pady = 10 )
     label2.grid(row = 0, column = c+1, padx = 5, pady = 5)
     play_end = ["BattedDown", "Block", "BlockedDefTD", "Complete","CompleteFumble","CompleteTD","DefTD", "Downed","Dropped","Fair Catch","Fumble","Fumble, Def TD","Good",
 "Incomplete","Interception","Interception, Def TD","Interception, Fumble",
@@ -124,7 +124,7 @@ def main():
 
 
 #NUMKEY Buttons
-    label3 = tkinter.Label(resultsgui, text = "End Ydline", padx = 35, pady = 20)
+    label3 = tkinter.Label(resultsgui, text = "End Ydline", padx = 20, pady = 20)
     label3.grid(row = 0, column = c+1, padx = 5, pady = 5)
     numbers = ["0","1","2","3","4","5","6","7","8","9"]
     r = 1
@@ -140,7 +140,7 @@ def main():
 #NEGATIVE BUTTON
     class negbutton:
         def __init__(self, c):
-            self.negbutton = tkinter.Button(resultsgui, text = "other's", bg = "red", padx = 35, pady = 20, command = lambda: self.onnegbuttonclick())
+            self.negbutton = tkinter.Button(resultsgui, text = "other's", bg = "red", padx = 20, pady = 20, command = lambda: self.onnegbuttonclick())
             self.negbutton.grid(row = 1, column = c + 1, padx = 5, pady = 5)
             self.negbutton.config(width = 5)        
         def onnegbuttonclick(self):
