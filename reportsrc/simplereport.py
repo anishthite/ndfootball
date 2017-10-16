@@ -35,18 +35,18 @@ class playresult:
 				found = False
 				#check if the play has been listed
 				for avgplay in namelist:
-					if play[5] == avgplay[0]:
+					if play[5] == avgplay[0] and play[6] == avgplay[1]:
 				#if it has then add it to the total sum, and ++ the divisor
-						avgplay[1] += float(play[9])
-						avgplay[2] +=1
+						avgplay[2] += float(play[9])
+						avgplay[3] +=1
 						found = True
 						break
 				#if not then add it to the end of the list
 				if (found == False):
-					namelist.append([play[5], float(play[9]), 1])
+					namelist.append([play[5], play[6], float(play[9]), 1])
 				#divide the list into a new list
 			for avgplay in namelist:
-				avgmostgainlist.append([avgplay[0], (float(avgplay[1])/float(avgplay[2]))])	
+				avgmostgainlist.append([[avgplay[0], avgplay[1]], (float(avgplay[2])/float(avgplay[3]))])	
 				#sort 	
 			sorts.quickSort(avgmostgainlist, 1)
 			return avgmostgainlist						
@@ -57,7 +57,7 @@ class playresult:
 		popularplay = []
 		#put all O or D in teamside
 		for play in self.splitlist(ndrole):
-			parsedplays.append(play[5])	
+			parsedplays.append([play[5], play[6]])	
 		#for each play in parsedplays
 		for play in parsedplays:	
 			found = False
@@ -123,7 +123,7 @@ class playresult:
 			else:
 				index +=1
 			
-	def gradeformations(self):
+	def gradeformations(self):    #idea: match rankings
 		parsedplays = []
 		gradedformations = []
 		# for play in self.splitlist('O'):
@@ -132,7 +132,7 @@ class playresult:
 		for play in self.avgmostgain('O'):
 			avgindex = self.searchindexplaylist(play[0], self.avgmostgain('O'))
 			runindex = self.searchindexplaylist(play[0],self.mostPopularFormation('O'))
-			if runindex/avgindex >1:
+			if runindex/avgindex > 1:
 				gradedformations.append([play[0], "RUN LESS", runindex/avgindex ])
 			elif runindex/avgindex < 1:
 				gradedformations.append([play[0], "RUN MORE", runindex/avgindex])
